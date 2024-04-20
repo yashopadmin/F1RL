@@ -21,10 +21,10 @@
 # SOFTWARE.
 
 # choose which SB3 image to use, CPU or GPU
-#ARG PARENT_IMAGE=stablebaselines/rl-baselines3-zoo-cpu
+ARG PARENT_IMAGE=stablebaselines/rl-baselines3-zoo-cpu
 
 # base the rest of the container off the chosen Stable Baselines 3 image
-FROM $stablebaselines/rl-baselines3-zoo-cpu
+FROM $PARENT_IMAGE
 
 RUN DEBIAN_FRONTEND="noninteractive" apt-get update --fix-missing && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y \
