@@ -12,7 +12,11 @@ This is an implementation of a simple reinforcement learning (RL) algorithm for 
 $ git clone --recurse-submodules https://github.com/FT-Autonomous/Team-1.git
 $ cd Team-1
 ```
-
+#### Starting Up Repo
+```bash
+$ docker build -t f1tenth_gym -f Dockerfile .
+$ docker run -it --name=f1tenth_gym_container --rm f1tenth_gym
+```
 **N.B.** Don't forget to include the ```--recurse-submodules``` argument when cloning our repo, or else the F1Tenth Gym won't be cloned!
 
 #### 2. Running the Docker container
